@@ -63,6 +63,9 @@ async function checkout(productList) {
   await page.goto(
     "https://www.amazon.com/gp/buy/spc/handlers/display.html?hasWorkingJavascript=1"
   );
+  /* CHECKOUT HERE */
+  (await waitThenGetElement("#placeYourOrder", true)).click();
+  /* CHECKOUT HERE */
   currentStatus = "Completed your order!";
 }
 
